@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	outline: none;
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--cyan-tint: hsl(179, 62%, 46%);
+	--bright-yellow: hsl(71, 73%, 54%);
+
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+	font-family: 'Karla', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+	background-color: var(--light-gray);
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	max-width: 80rem;
+	box-shadow: 0 .5rem 2rem rgb(0, 0, 0, 0.2);
+}
+
+.top {
+	background-color: #fff;
+	padding: 4rem;
+}
+
+.top h1 {
+	font-size: 3rem;
+	color: var(--cyan);
+	margin-bottom: 3rem;
+}
+
+.top p:nth-child(2) {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--bright-yellow);
+	margin-bottom: 2rem;
+}
+.top p:nth-child(3) {
+	color: var(--grayish-blue);
+	max-width: 80%;
+}
+
+.bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.bottom h2 {
+	font-size: 2rem;
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.left {
+	padding: 4rem;
+	background-color: var(--cyan);
+}
+.left p:nth-child(2) {
+	color: var(--light-gray);
+	margin-bottom: 1rem;
+}
+.dollar {
+	font-size: 4rem;
+	color: #fff;
+	margin-right: 1rem;
+}
+.left p:nth-child(3) {
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+button {
+	background-color: var(--bright-yellow);
+	border: none;
+	width: 25rem;
+	height: 5rem;
+	border-radius: .5rem;
+	box-shadow: 0 .5rem 2rem rgb(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 1.8rem;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+button:hover {
+	transform: translateY(-.5rem);
+}
+
+.right {
+	padding: 4rem;
+	background-color: var(--cyan-tint);
+}
+.right p {
+	color: var(--light-gray);
+	width: 70%;
+}
+
+@media (max-width: 810px) {
+	main {
+		margin: 0 5%;
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		height: 100%;
+	}
+	main {
+		margin: 3rem 5%;
+	}
+	.top p:nth-child(3) {
+		max-width: 90%;
+	}
+	.bottom {
+		grid-template-columns: 1fr;
+	}
+	.right p {
+		width: 90%;
+	}
+}
+
+@media (max-width: 414px) {
+	.top h1 {
+		font-size: 2.5rem;
+	}
+}
